@@ -1,13 +1,20 @@
 import devprocess
 
-result = 'Hello World'
+result = devprocess.floating_point_division(5, 2)
 
 print(result)
 
-result = 123
+result = devprocess.square_value(5)
 
 print(result)
 
-result = devprocess.add_numbers(1, 1)
+result = input('Get value ')
+
+print(result)
+
+result = input('Get a value to square ')
+result = int(result)
+
+result = devprocess.square_value(result)
 
 print(result)
