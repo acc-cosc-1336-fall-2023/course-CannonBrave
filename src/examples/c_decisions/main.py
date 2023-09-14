@@ -1,12 +1,8 @@
 import decisions
 
-result = decisions.is_overtime(40)
+grade = int(input("Enter a numerical grade:"))
 
-if(result == False):
-    print('40 is not overtime')
+letter_grade = decisions.get_letter_grade(grade)
+print("Grade is: "+ letter_grade)
 
 
-if(result):
-    print('Is overtime')
-else:
-    print("Not overtime")
