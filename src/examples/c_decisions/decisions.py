@@ -50,4 +50,27 @@ def get_letter_grade(grade):
         letter_grade = "Invalid Grade"
 
     return letter_grade
-        
+
+def display_menu():
+    print("1-Simple if")
+    print("2-if else")
+    print("3-if elif")
+
+def run_menu():
+    display_menu()
+    option = input("Enter a menu option (1, 2, or 3): ")
+
+    handle_menu_option(option)
+
+def handle_menu_option(option):
+    if(option == "1"):
+        selected_option_1()
+    elif(option == "2"):
+        print("User selected option 2")
+    elif(option == "3"):
+        print("User selected option 3")
+    else:
+        print("Invalid option")
+
+def selected_option_1():
+    print("User selected option 1")
