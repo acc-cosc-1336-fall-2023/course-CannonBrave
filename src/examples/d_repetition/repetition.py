@@ -72,3 +72,37 @@ def for_display_squares(num1, num2):
     for n in range(num1, num2):
         square = n ** 2
         print(n, '\t', square)
+
+def while_validate_user_input():
+    lot_number = -1
+
+    while(lot_number != 0):
+        lot_number = input("Enter Lot Number (1-10) or 0 to exit ")
+    
+        if(lot_number.isnumeric()):
+            lot_number = int(lot_number)
+
+            if(lot_number !=0):
+                while((lot_number < 1 or lot_number > 10)):
+                    lot_number = int(input('Number must be in the range 1 to 10'))
+
+            print("lot_number: " , lot_number)
+        else:
+            print("Exit")
+    else:
+        print("Lot number must be numeric")
+
+def nested_while_loop(row, col):
+    i = 0
+
+    while(i < row):
+        i += 1
+        j = 0
+        print("i:", i, "outer loop-wait for inner loop")
+
+        while(j < col):
+            print("j, ", j, "\t inner loop")
+            j += 1
+
+        print("inner loop complete")
+

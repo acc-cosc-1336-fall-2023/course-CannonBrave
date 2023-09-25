@@ -10,4 +10,6 @@ import repetition
 #print("sum of squares is: " + str(results))
 #repetition.for_num_range_w_start_value(5, 10)
 #repetition.for_num_range_w_step_value(26, 0, -3)
-repetition.for_display_squares(0, 5)
+#repetition.for_display_squares(0, 5)
+#repetition.while_validate_user_input()
+repetition.nested_while_loop(3, 3)

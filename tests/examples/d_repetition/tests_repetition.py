@@ -8,6 +8,7 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(True, test_config())
 
     def test_sum_of_squares(self):
+        self.assertEqual(sum_of_squares(-1), 0)
         self.assertEqual(sum_of_squares(3), 14)
         self.assertEqual(sum_of_squares(4), 30)
         self.assertEqual(sum_of_squares(5), 55)
@@ -29,6 +30,5 @@ class Test_Config(unittest.TestCase):
 
 
 
-    #def test_for_sum_of_squares(self):
-     #   self.assertEqual(for_sum_of_squares(3), 14)
+
 
