@@ -9,7 +9,9 @@ has the test functions
     #class examples
 #from tests.homework.c_decisions import tests_decisions
     #homework 2
-from tests.examples.d_repetition import tests_repetition 
+#from tests.examples.d_repetition import tests_repetition 
+    #class examples
+from tests.homework.d_repetition import tests_repetition
 
 #suite = unittest.TestLoader().loadTestsFromModule(tests_decisions)
     #class examples / Homework 1
