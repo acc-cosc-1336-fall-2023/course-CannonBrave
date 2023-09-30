@@ -12,7 +12,8 @@ has the test functions
 #from tests.examples.d_repetition import tests_repetition 
     #class examples
 #from tests.homework.d_repetition import tests_repetition
-from tests.examples.e_functions import tests_functions
+#from tests.examples.e_functions import tests_functions
+from tests.homework.e_functions import tests_functions
 
 #suite = unittest.TestLoader().loadTestsFromModule(tests_decisions)
     #class examples / Homework 1
