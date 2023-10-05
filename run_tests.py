@@ -13,11 +13,12 @@ has the test functions
     #class examples
 #from tests.homework.d_repetition import tests_repetition
 #from tests.examples.e_functions import tests_functions
-from tests.homework.e_functions import tests_functions
+#from tests.homework.e_functions import tests_functions
+from tests.examples.h_strings import tests_strings
 
 #suite = unittest.TestLoader().loadTestsFromModule(tests_decisions)
     #class examples / Homework 1
 #suite = unittest.TestLoader().loadTestsFromModule(tests_in_proc_out)
     #homework 2
-suite = unittest.TestLoader().loadTestsFromModule(tests_functions)
-unittest.TextTestRunner(verbosity=2).run(suite)                       
+suite = unittest.TestLoader().loadTestsFromModule(tests_strings)
+unittest.TextTestRunner(verbosity=2).run(suite)                     
