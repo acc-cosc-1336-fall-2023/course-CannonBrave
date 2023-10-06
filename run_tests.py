@@ -14,7 +14,8 @@ has the test functions
 #from tests.homework.d_repetition import tests_repetition
 #from tests.examples.e_functions import tests_functions
 #from tests.homework.e_functions import tests_functions
-from tests.examples.h_strings import tests_strings
+#from tests.examples.h_strings import tests_strings
+from tests.homework.h_strings import tests_strings
 
 #suite = unittest.TestLoader().loadTestsFromModule(tests_decisions)
     #class examples / Homework 1
