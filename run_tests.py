@@ -17,11 +17,10 @@ has the test functions
 #from tests.examples.h_strings import tests_strings
 #from tests.homework.h_strings import tests_strings
 #from tests.examples.g_lists_and_tuples import tests_lists_and_tuples
-from tests.homework.i_dictionaries_sets import tests_dictionaries_and_sets
-
+from tests.examples.i_dictionaries_sets import tests_dictionaries_and_sets
 #suite = unittest.TestLoader().loadTestsFromModule(tests_decisions)
     #class examples / Homework 1
 #suite = unittest.TestLoader().loadTestsFromModule(tests_in_proc_out)
     #homework 2
 suite = unittest.TestLoader().loadTestsFromModule(tests_dictionaries_and_sets)
-unittest.TextTestRunner(verbosity=2).run(suite)                     
+unittest.TextTestRunner(verbosity=2).run(suite)                   
