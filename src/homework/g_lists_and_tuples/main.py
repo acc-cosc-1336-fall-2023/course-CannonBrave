@@ -1,4 +1,4 @@
-#
-import lists
+import dictionary
 
-list.display_nums_list()
+dictionary.run_menu()
+
