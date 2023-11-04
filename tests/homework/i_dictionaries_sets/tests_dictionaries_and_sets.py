@@ -22,3 +22,35 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(len(get_inventory()), 1)
         self.assertTrue('Widget2' in get_inventory())
 
+    def test_set_intersection(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        
+        self.assertEqual(baseball.intersection(basketball), set(['Carmen', 'Alicia']))
+
+    def test_set_union(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        
+        self.assertEqual(baseball.union(basketball), set(['Jodi', 'Carmen', 'Aida', 'Alicia', 'Eva', 'Sarah']))
+
+    def test_set_difference_baseball(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        
+        self.assertEqual(baseball.difference(basketball), set(['Jodi', 'Aida']))
+
+    def test_set_difference_basketball(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        
+        self.assertEqual(basketball.difference(baseball), set(['Eva', 'Sarah']))
+        self.assertEqual(baseball.difference(basketball), set(['Jodi', 'Aida']))
+
+    def test_set_symetric_difference(self):
+        baseball = set(['Jodi', 'Carmen', 'Aida', 'Alicia'])
+        basketball = set(['Eva', 'Carmen', 'Alicia', 'Sarah'])
+        
+        self.assertEqual(basketball.symmetric_difference(baseball), set(['Jodi', 'Aida', 'Eva', 'Sarah']))
+        
+    
