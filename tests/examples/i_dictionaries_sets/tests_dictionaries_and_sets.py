@@ -36,3 +36,26 @@ class Test_Config(unittest.TestCase):
 
         delete_friend_phonebook('Kati', phonebook)
         self.assertEqual(phonebook, {'Katie':'555-2222', 'Joanne':'555-3333'})
+
+    def test_set_union(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+        self.assertEqual(set1.union(set2), set([1,2,3,4,5,6]))
+
+    def test_set_difference(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+
+        self.assertEqual(set1.difference(set2), set([1,2]))
+
+    def test_set_difference_set2(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+
+        self.assertEqual(set2.difference(set1), set([5,6]))
+
+    def test_set_symmetric_difference(self):
+        set1 = set([1,2,3,4])
+        set2 = set([3,4,5,6])
+
+        self.assertEqual(set1.symmetric_difference(set2), set([1,2,5,6]))
