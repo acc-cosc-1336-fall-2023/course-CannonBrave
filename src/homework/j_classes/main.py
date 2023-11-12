@@ -1,5 +1,4 @@
 from class_a import Die
-import time
 
 while True:
     die = Die()

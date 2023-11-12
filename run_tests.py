@@ -25,4 +25,4 @@ from tests.homework.j_classes import tests_classes
 #suite = unittest.TestLoader().loadTestsFromModule(tests_in_proc_out)
     #homework 2
 suite = unittest.TestLoader().loadTestsFromModule(tests_classes)
-unittest.TextTestRunner(verbosity=2).run(suite)                   
+unittest.TextTestRunner(verbosity=2).run(suite)

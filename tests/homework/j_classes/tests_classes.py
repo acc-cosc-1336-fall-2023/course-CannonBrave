@@ -1,5 +1,4 @@
 import unittest
-
 from src.homework.j_classes.class_a import Die
 
 class TestDie(unittest.TestCase):
