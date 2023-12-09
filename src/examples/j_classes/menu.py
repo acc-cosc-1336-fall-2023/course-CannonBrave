@@ -1,5 +1,7 @@
-import random
-import customer
+import random, time
+from src.examples.j_classes.customer import Customer
+from src.examples.j_classes.customer_data import CustomerData
+from src.examples.j_classes.atm import ATM
 
 def scan_card(customer_list_size):
     choice = input('Enter something...')#pause
@@ -13,26 +15,29 @@ def display_menu():
     print('4-Exit')
 
 def run_menu():
-
-    list_customers = [customer.Customer(),
-                      customer.Customer(),
-                      customer.Customer()]
+    random.seed(int(time.time()))
+    customer_data = CustomerData ()
+    list_customers = customer_data.get_customers();
 
     while(True):
         menu_choice = 0
         customer_index = scan_card(len(list_customers))
-        customer = list_customers[customer_index]
-
-        account_index = print("Enter 1 for checking 2 for savings")
-
-        account = customer.get_account(account_index)
         
-        atm = atm.ATM(account)
+        customer = list_customers[customer_index]
+        
+        account_index = int(input("Enter 1 for checking 2 for savings"))
+
+        account = customer.get_account(account_index-1)
+        
+        atm = ATM(account)
 
         while(menu_choice != '4'):
             display_menu()
             menu_choice = input("Enter choice: ")
             handle_menu(menu_choice, atm)
+
+            if(menu_choice == '4'):
+                customer_data.save_customers(list_customers)
 
 def handle_menu(menu_choice, atm):
 

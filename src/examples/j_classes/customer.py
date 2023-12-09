@@ -2,11 +2,12 @@ import src.examples.j_classes.bank_account
 
 class Customer:
 
-    __list_accounts = []
-
-    def __init__(self):
-        self.__list_accounts.append(src.examples.j_classes.bank_account.BankAccount(-1))#add one account to the list
-        self.__list_accounts.append(src.examples.j_classes.bank_account.BankAccount(-1))#add one account to the list
+    def __init__(self, checking_balance, saving_balance):
+        self.__list_accounts = []
+        checking_account = src.examples.j_classes.bank_account.BankAccount(checking_balance)
+        savings_account = src.examples.j_classes.bank_account.BankAccount(saving_balance)
+        self.__list_accounts.append(checking_account)#add one account to the list
+        self.__list_accounts.append(savings_account)#add one account to the list
 
     def get_account(self, index):
         return self.__list_accounts[index]
